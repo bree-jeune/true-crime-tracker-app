@@ -1,0 +1,54 @@
+/* 1. Reset some default browser spacing */
+body {
+  margin: 0; /* Remove the default margin around the page */
+  font-family: 'Segoe UI', Arial, sans-serif;  
+  background: #181818;   /* Dark background for spooky crime feel */
+  color: #f2f2f2; /* Light, easy-to-read text */
+}
+
+/* 2. Header Styles */
+header {
+  background: #2d2d2d;   /* Medium-dark header background */
+  padding: 2rem 1rem;    /* 2 rem of padding top/bottom, 1 rem left/right */
+  text-align: center;    /* Center all header text */
+  border-bottom: 3px solid #a90000;  /* Red police-tape underline */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;     /* Larger heading */
+  letter-spacing: 2px;   /* A little more space between letters for 'mystery' */
+}
+
+/* 3. Main Section Styles */
+main {
+  padding: 2rem 1rem;
+}
+
+section h2 {
+  color: #a90000;        /* Use forensic red for section titles */
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+/* 4. Footer Styles */
+footer {
+  background: #1c1c1c;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #a90000;
+}
+
+a {
+  color: #a90000;    /* Red links fit the theme */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
