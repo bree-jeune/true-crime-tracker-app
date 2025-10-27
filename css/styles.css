@@ -1,54 +1,149 @@
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crime-card {
+        max-width: 90%;
+    }
+}
+
 /* 1. Reset some default browser spacing */
 body {
-  margin: 0; /* Remove the default margin around the page */
-  font-family: 'Segoe UI', Arial, sans-serif;  
-  background: #181818;   /* Dark background for spooky crime feel */
-  color: #f2f2f2; /* Light, easy-to-read text */
+    margin: 0; /* Remove the default margin around the page */
+    font-family: 'Roboto', Arial, sans-serif;  
+    background: #181818 url('https://www.transparenttextures.com/patterns/asfalt-light.png');  /* Dark background for spooky crime feel */
+    color: #f2f2f2; /* Light, easy-to-read text */
 }
 
 /* 2. Header Styles */
 header {
-  background: #2d2d2d;   /* Medium-dark header background */
-  padding: 2rem 1rem;    /* 2 rem of padding top/bottom, 1 rem left/right */
-  text-align: center;    /* Center all header text */
-  border-bottom: 3px solid #a90000;  /* Red police-tape underline */
+    background: #2d2d2d;   /* Medium-dark header background */
+    padding: 2rem 1rem;    /* 2 rem of padding top/bottom, 1 rem left/right */
+    text-align: center;    /* Center all header text */
+    border-bottom: 3px solid #a90000;  /* Red police-tape underline */
 }
 
+.hero {
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'),linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(24,24,24,1));
+    background-size: cover;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    color: #f2f2f2;
+}
+.overlay {
+    background: rgba(0,0,0,0.3);
+    padding: 2rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;     /* Larger heading */
-  letter-spacing: 2px;   /* A little more space between letters for 'mystery' */
+    font-family: 'Montserrat', 'Arial Black', sans-serif; letter-spacing: 3px;
+    margin: 0;
+    font-size: 2.5rem;     /* Larger heading */
+    letter-spacing: 2px;   /* A little more space between letters for 'mystery' */
 }
 
 /* 3. Main Section Styles */
 main {
-  padding: 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 section h2 {
-  color: #a90000;        /* Use forensic red for section titles */
-  margin-bottom: 0.5rem;
+    color: #a90000;   /* Use forensic red for section titles */
+    margin-bottom: 0.5rem;
 }
 
 section p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* 4. Footer Styles */
 footer {
-  background: #1c1c1c;
-  color: #888;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  border-top: 2px solid #a90000;
+    background: #1c1c1c;
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 2px solid #a90000;
 }
 
 a {
-  color: #a90000;    /* Red links fit the theme */
-  text-decoration: none;
+    color: #a90000;    /* Red links fit the theme */
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
+/* 5. Crime Card Style */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.crime-card {
+    display: flex;      /* Activate flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    flex: 1 1 300px;
+    max-width: 350px;
+    align-items: center;  /* Horizontally center children */
+    justify-content: center;    /* Vertically center children (if .crime-card has a set height) */
+    background: rgba(28, 23, 31, 0.93);
+    border: 2px solid #b80000;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px #222, 0 0 12px #b8000035;
+    margin: 1.5rem 0;
+    transition: opacity 0.6s ease, transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 1;
+}
+
+.crime-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px #a9000088, 0 0 8px #fff2;
+}
+
+.crime-card.fade-out {
+    opacity: 0;
+    transform: scale(0.97);
+}
+
+.crime-card p {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+
+#new-case-btn {
+    background: linear-gradient(90deg,#a90000 60%,#900c3f 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px #a9000044;
+    transition: background .2s, box-shadow .2s, transform .1s;
+}
+
+#new-case-btn:hover {
+    background: #c60101;
+    box-shadow: 0 4px 16px #a9000088, 0 0 10px #fff2;
+    transform: scale(1.03);
+}
+
+#new-case-btn:focus {
+    outline: 2px solid #ff4d4d;
+    outline-offset: 4px;
+}
+

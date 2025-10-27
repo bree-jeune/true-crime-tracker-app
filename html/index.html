@@ -4,14 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>True Crime Tracker</title>
-        <link rel="stylesheet" type="text/css" href=".../css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
     </head>
     <body>
-        <header>
-            <h1>True Crime Tracker</h1>
-            <p>Log mysteries, build criminal profiles, and follow famous cases!</p>
+        <header role="banner" class="hero">
+            <div class="overlay">
+                <h1>True Crime Tracker</h1>
+                <p>Log mysteries, build criminal profiles, and follow famous cases!</p>
+            </div>
         </header>
-        <main>
+        <main role="main">
+            <section id="featured-case" aria-label="Featured Crime Case">
+                <h2>Featured Crime Case</h2>
+                <div class="cards-container">
+                    <div class="crime-card">
+                        <p class="crime-title">???</p>
+                        <p class="crime-details">???</p>
+                    </div>
+                    <div class="crime-card">
+                        <p class="crime-title">???</p>
+                        <p class="crime-details">???</p>
+                    </div>
+                    <div class="crime-card">
+                        <p class="crime-title">???</p>
+                        <p class="crime-details">???</p>
+                    </div>
+                    <div class="crime-card">
+                        <p class="crime-title">???</p>
+                        <p class="crime-details">???</p>
+                    </div>
+                    <button id="new-case-btn">Show Another</button>
+                </div>
+            </section>
             <section>
                 <h2>Get Started</h2>
                 <p>This is your personal vault for all things true crime. Ready to track your first case?</p>
@@ -26,7 +51,8 @@
             </section>
         </main>
         <footer>
-            <p>Built by Bree &copy;2025 True Crime Tracker</p>
+            <p>&copy;2025 <br/>True Crime Tracker <br/> Built by <a href="https://breeintech.com" target="_blank" rel="noopener noreferrer">Bree</a> </p>
         </footer>
+        <script src="../js/script.js"></script>
     </body>
 </html>
